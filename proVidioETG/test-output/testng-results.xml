@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="4" total="7" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-09-13T10:16:00 IST" name="ProvidioTestcases" finished-at="2023-09-13T10:21:20 IST" duration-ms="319729">
+    <groups>
+    </groups>
+    <test started-at="2023-09-13T10:16:00 IST" name="Automation" finished-at="2023-09-13T10:21:20 IST" duration-ms="319729">
+      <class name="com.GuestUserWith_Minicart_Paypal.tc__BundleProductForGuestUser_InMC_Paypal">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.GuestUserWith_Minicart_Paypal.tc__BundleProductForGuestUser_InMC_Paypal@74e4be21]" started-at="2023-09-13T10:17:50 IST" name="setUp" finished-at="2023-09-13T10:17:52 IST" duration-ms="2018" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="bundleProduct()[pri:0, instance:com.GuestUserWith_Minicart_Paypal.tc__BundleProductForGuestUser_InMC_Paypal@74e4be21]" started-at="2023-09-13T10:17:52 IST" name="bundleProduct" finished-at="2023-09-13T10:19:31 IST" duration-ms="98908" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bundleProduct -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.GuestUserWith_Minicart_Paypal.tc__BundleProductForGuestUser_InMC_Paypal@74e4be21]" started-at="2023-09-13T10:19:31 IST" name="afterMethod" finished-at="2023-09-13T10:19:31 IST" duration-ms="22" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=bundleProduct status=SUCCESS method=tc__BundleProductForGuestUser_InMC_Paypal.bundleProduct()[pri:0, instance:com.GuestUserWith_Minicart_Paypal.tc__BundleProductForGuestUser_InMC_Paypal@74e4be21] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.GuestUserWith_Minicart_Paypal.tc__BundleProductForGuestUser_InMC_Paypal -->
+      <class name="com.GuestUserWith_Minicart_Paypal.tc__PaypalCheckout_MiniCart_GuestUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.GuestUserWith_Minicart_Paypal.tc__PaypalCheckout_MiniCart_GuestUser@202b5293]" started-at="2023-09-13T10:19:31 IST" name="setUp" finished-at="2023-09-13T10:19:33 IST" duration-ms="2019" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalCheckout_MiniCart()[pri:0, instance:com.GuestUserWith_Minicart_Paypal.tc__PaypalCheckout_MiniCart_GuestUser@202b5293]" started-at="2023-09-13T10:19:33 IST" name="paypalCheckout_MiniCart" finished-at="2023-09-13T10:21:20 IST" duration-ms="106262" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalCheckout_MiniCart -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.GuestUserWith_Minicart_Paypal.tc__PaypalCheckout_MiniCart_GuestUser@202b5293]" started-at="2023-09-13T10:21:20 IST" name="afterMethod" finished-at="2023-09-13T10:21:20 IST" duration-ms="18" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalCheckout_MiniCart status=SUCCESS method=tc__PaypalCheckout_MiniCart_GuestUser.paypalCheckout_MiniCart()[pri:0, instance:com.GuestUserWith_Minicart_Paypal.tc__PaypalCheckout_MiniCart_GuestUser@202b5293] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.GuestUserWith_Minicart_Paypal.tc__PaypalCheckout_MiniCart_GuestUser -->
+      <class name="com.GuestUserWith_Minicart_Paypal.tc__Bundle_GcAndAllPromotions_Guest_InMC_Paypal">
+        <test-method is-config="true" signature="setUpforReport()[pri:0, instance:com.GuestUserWith_Minicart_Paypal.tc__Bundle_GcAndAllPromotions_Guest_InMC_Paypal@1ec22831]" started-at="2023-09-13T10:15:58 IST" name="setUpforReport" finished-at="2023-09-13T10:16:00 IST" duration-ms="2317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpforReport -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.GuestUserWith_Minicart_Paypal.tc__Bundle_GcAndAllPromotions_Guest_InMC_Paypal@1ec22831]" started-at="2023-09-13T10:16:00 IST" name="setUp" finished-at="2023-09-13T10:16:02 IST" duration-ms="2073" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="bundle_GcAndAllPromotions()[pri:0, instance:com.GuestUserWith_Minicart_Paypal.tc__Bundle_GcAndAllPromotions_Guest_InMC_Paypal@1ec22831]" started-at="2023-09-13T10:16:02 IST" name="bundle_GcAndAllPromotions" finished-at="2023-09-13T10:17:50 IST" duration-ms="108299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bundle_GcAndAllPromotions -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.GuestUserWith_Minicart_Paypal.tc__Bundle_GcAndAllPromotions_Guest_InMC_Paypal@1ec22831]" started-at="2023-09-13T10:17:50 IST" name="afterMethod" finished-at="2023-09-13T10:17:50 IST" duration-ms="28" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=bundle_GcAndAllPromotions status=SUCCESS method=tc__Bundle_GcAndAllPromotions_Guest_InMC_Paypal.bundle_GcAndAllPromotions()[pri:0, instance:com.GuestUserWith_Minicart_Paypal.tc__Bundle_GcAndAllPromotions_Guest_InMC_Paypal@1ec22831] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.GuestUserWith_Minicart_Paypal.tc__Bundle_GcAndAllPromotions_Guest_InMC_Paypal@1ec22831]" started-at="2023-09-13T10:21:20 IST" name="tearDown" finished-at="2023-09-13T10:26:26 IST" duration-ms="306577" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.GuestUserWith_Minicart_Paypal.tc__Bundle_GcAndAllPromotions_Guest_InMC_Paypal -->
+    </test> <!-- Automation -->
+  </suite> <!-- ProvidioTestcases -->
+</testng-results>
