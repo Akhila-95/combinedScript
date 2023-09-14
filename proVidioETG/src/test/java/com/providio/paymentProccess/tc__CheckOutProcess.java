@@ -138,9 +138,10 @@ public class tc__CheckOutProcess extends baseClass {
 		        if (options1.size() > 1) {
 		            //logger.info("Address already exists");
 		        	WebElement addNewAddress = driver.findElement(By.xpath("(//button[contains(@class,'btn-add-new')])[1]"));
-		        	addNewAddress.click();
-		        	addressDetails(cp);
-		     //   }
+		        	if(addNewAddress.isDisplayed()) {
+			        	//addNewAddress.click();			        	
+		        	}
+			   
 	        }else {
 	        	//shipping address
 	        	addressDetails(cp);
@@ -150,29 +151,33 @@ public class tc__CheckOutProcess extends baseClass {
     public void selectBillingAddress(checkOutPage cp) throws InterruptedException {
     	 WebElement billingAddress = driver.findElement(By.xpath("//label[contains(text(),'Billing Address')]"));
     	 
-    	 if(billingAddress.isDisplayed()) {  		 
-		    	Thread.sleep(1000);		    	
-		        cp.setBillingFName();		
-		        logger.info("Entered fname");		
-		        Thread.sleep(1000);		
-		        cp.setBillingLName();		
-		        logger.info("Entered lname");		
-		        WebElement Address1 = driver.findElement(By.xpath("//input[@id='billingAddressOne']"));		
-		        Random random = new Random();		
-		        int randomNumber = random.nextInt(900) + 100; // Generates a random number between 100 and 999		
-		        address = String.valueOf(randomNumber);		
-		        Address1.clear();		
-		        Address1.sendKeys(address);		
-		        WebElement Address11 = driver.switchTo().activeElement();
-		        Thread.sleep(1000);		
-		        Address11.sendKeys(Keys.ARROW_DOWN);		
-		        Thread.sleep(1000);		
-		        Address11.sendKeys(Keys.ARROW_DOWN);		
-		        Address11.sendKeys(Keys.ENTER);		
-		        Thread.sleep(2000);		
-		        cp.setBillingPhoneNum();		
-		        logger.info("Entered phone number");		        
-		        Thread.sleep(2000);
+    	 if(billingAddress.isDisplayed()) {
+    		  
+    		 WebElement billingName = driver.findElement(By.id("billingFirstName"));
+    		 if(billingName.isDisplayed()) {
+			    	Thread.sleep(1000);		    	
+			        cp.setBillingFName();		
+			        logger.info("Entered fname");		
+			        Thread.sleep(1000);		
+			        cp.setBillingLName();		
+			        logger.info("Entered lname");		
+			        WebElement Address1 = driver.findElement(By.xpath("//input[@id='billingAddressOne']"));		
+			        Random random = new Random();		
+			        int randomNumber = random.nextInt(900) + 100; // Generates a random number between 100 and 999		
+			        address = String.valueOf(randomNumber);		
+			        Address1.clear();		
+			        Address1.sendKeys(address);		
+			        WebElement Address11 = driver.switchTo().activeElement();
+			        Thread.sleep(1000);		
+			        Address11.sendKeys(Keys.ARROW_DOWN);		
+			        Thread.sleep(1000);		
+			        Address11.sendKeys(Keys.ARROW_DOWN);		
+			        Address11.sendKeys(Keys.ENTER);		
+			        Thread.sleep(2000);		
+			        cp.setBillingPhoneNum();		
+			        logger.info("Entered phone number");		        
+			        Thread.sleep(2000);
+    		 }
     	 }	        
     }
     
@@ -206,12 +211,12 @@ public class tc__CheckOutProcess extends baseClass {
 	            Address11.sendKeys(Keys.ENTER);
 	            Thread.sleep(1000);
 	            cp.clickpaymentbutton(driver);
-	            logger.info("Clicked on the payment button");
+	            logger.info("Clicked on the payment button 2nd time");
 	
 	
 	        }else {
 	        	//test.fail("User entered the wrong creditials and error not displayed");         
-	            logger.info("User entered the wrong creditials and error not displayed");
+	            //logger.info("User entered the wrong creditials and error not displayed");
 	        }
         }
    /*public void selectPaymentMethod(checkOutPage cp) throws InterruptedException {	   

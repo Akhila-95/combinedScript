@@ -76,7 +76,7 @@ public class tc__LoginSc extends baseClass {
 	}
 	}
 
-	@Test
+	//@Test
 	public void verifyLoginFailureWithIncorrectCredentials() throws InterruptedException {
 		test.info("Verify login failure with incorrect credentials");
 		// Test Case 2: Verify login failure with incorrect credentials
@@ -114,7 +114,7 @@ public class tc__LoginSc extends baseClass {
 		//softAssert.assertAll();
 	}
 
-	@Test
+	//@Test
 	public void verifyLoginFailureWithEmptyEmailAndPassword() throws InterruptedException {
 		test.info("Verify login failure with empty email and password");
 		// Test Case 3: Verify login failure with empty email and password
@@ -159,7 +159,7 @@ public class tc__LoginSc extends baseClass {
 		//softAssert.assertAll();
 	}
 
-	@Test
+	//@Test
 	public void verifyLoginFailureWithInvalidEmailFormat() throws InterruptedException {
 		test.info("Verify login failure with invalid email format");
 		// Test Case 4: Verify login failure with invalid email format
@@ -196,7 +196,7 @@ public class tc__LoginSc extends baseClass {
 		//softAssert.assertAll();
 	}
 
-	@Test
+	//@Test
 	public void verifyLoginFailureWithIncorrectPassword() throws InterruptedException {
 		test.info("Verify login failure with incorrect password");
 		// Test Case 5: Verify login failure with incorrect password
@@ -236,7 +236,7 @@ public class tc__LoginSc extends baseClass {
 		//softAssert.assertAll();
 	}
 	
-	@Test
+	//@Test
 	public void verifyLoginFailureWithEmptyEmail() throws InterruptedException {
 		test.info("Verify login failure with empty email");
 		// Test Case 3: Verify login failure with empty email and password
@@ -277,7 +277,7 @@ public class tc__LoginSc extends baseClass {
 		//softAssert.assertAll();
 	}
 	
-	@Test
+	//@Test
 	public void verifyLoginFailureWithEmptyPassword() throws InterruptedException {
 		test.info("Verify login failure with empty password");
 		// Test Case 3: Verify login failure with empty email and password

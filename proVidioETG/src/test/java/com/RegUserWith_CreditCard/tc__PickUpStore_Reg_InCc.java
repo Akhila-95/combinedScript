@@ -58,9 +58,9 @@ public class  tc__PickUpStore_Reg_InCc extends baseClass {
 	            cc.paymentByCreditCard(); 
 		    		 
 	    	 }else { 
-	    	     //selecting mens-pants category
-	    	     Mens_Pants_PickUpInStore pickUpstore = new Mens_Pants_PickUpInStore();
-	    	     pickUpstore.mens_Pants_PickUpInStore(driver);
+	    		// selects a random catgory and product add to cart
+		          navigationProccess navProccess = new navigationProccess();
+		          navProccess.commonNavigationProccess();
 	    	     
 			    // common checkoutProcess	         
 				 tc__CheckOutProcess cp = new tc__CheckOutProcess();         

@@ -82,8 +82,12 @@ WebDriver lDriver;
 	//paypal by salesforce integration
 	@FindBy(xpath = "//div[contains(@class,'salesforce')]")
 	WebElement salesforcePaypalButton;
-	public void  clickSalesforcePaypalButton() {
+	public void  clickSalesforcePaypalButton(WebDriver driver) throws InterruptedException {
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].click();", salesforcePaypalButton);
 		salesforcePaypalButton.click();
+		Thread.sleep(2000);
 	}
 	
 	//google pay button for salesforce

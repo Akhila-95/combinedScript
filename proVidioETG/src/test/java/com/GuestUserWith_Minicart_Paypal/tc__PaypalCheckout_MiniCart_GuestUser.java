@@ -26,6 +26,8 @@ public class tc__PaypalCheckout_MiniCart_GuestUser extends baseClass {
 		         navigationProccess navProccess = new navigationProccess();
 		         navProccess.commonNavigationProccess();
 		    
+		         
+		         
 	         //checkout from mini cart by paypal	        
 		        tc__CheckOutProcessByPayPal checkOutProcessByPayPal= new tc__CheckOutProcessByPayPal();
 		        checkOutProcessByPayPal. checkoutprocessFromMiniCart();

@@ -52,10 +52,10 @@ public class  tc__PickUpStore_Reg_InVC_Paypal extends baseClass {
  	             paypal.checkoutprocessFromViewCart();   
 		    		 
 	    	 }else { 
-	    	     //selecting mens-pants category
-	    	     Mens_Pants_PickUpInStore pickUpstore = new Mens_Pants_PickUpInStore();
-	    	     pickUpstore.mens_Pants_PickUpInStore(driver);
-	    	     
+	    		// selects a random catgory and product add to cart
+		          navigationProccess navProccess = new navigationProccess();
+		          navProccess.commonNavigationProccess();
+		          
 	    	   //paypal checkout form view cart page
  	             tc__CheckOutProcessByPayPal paypal= new tc__CheckOutProcessByPayPal();	         
  	             paypal.checkoutprocessFromViewCart();   

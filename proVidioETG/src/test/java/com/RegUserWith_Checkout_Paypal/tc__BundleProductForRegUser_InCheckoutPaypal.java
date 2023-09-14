@@ -57,7 +57,11 @@ public class tc__BundleProductForRegUser_InCheckoutPaypal  extends baseClass{
 			        }
 				
 	      
-      		//paypal process from checkout page
+		        // common checkoutProcess	         
+				 tc__CheckOutProcess cp = new tc__CheckOutProcess();         
+				 cp.checkoutprocess();
+				 
+				 //paypal process from checkout page
       		   tc__CheckOutProcessByPayPal cpp = new tc__CheckOutProcessByPayPal();
       		   cpp.checkoutprocessFromCheckout();
 		 }else {

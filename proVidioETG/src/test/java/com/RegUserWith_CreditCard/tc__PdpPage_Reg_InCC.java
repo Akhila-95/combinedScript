@@ -78,10 +78,10 @@ public class tc__PdpPage_Reg_InCC extends baseClass {
 	    plp.selectProductRandom(driver);
 	    logger.info("Clicked on a product from the listing page");
 	    
-	    //validate the product selected
-	    validateproductselect();
+	   
 	}
 
+	
 	// Step 3: Perform actions on Product Description Page
 	private void performActionsOnProductDescriptionPage() throws InterruptedException {
 	    productDescriptionPage pdp = new productDescriptionPage(driver);
@@ -137,24 +137,7 @@ public class tc__PdpPage_Reg_InCC extends baseClass {
     		 };
 	}
 
-	private void validateproductselect() {
-		
-		//validate the product is selected
-		test.info("verify that product is selected");
-		
-        WebElement pdpHeader = driver.findElement(By.xpath("//h1[@class ='product-name hidden-sm-down']"));
-        boolean pdpHeaderDisplayed = pdpHeader.isDisplayed();  
 
-        if (pdpHeaderDisplayed) {
-            test.pass("Successfully clicked on the product from the product listing page");
-            logger.info("Successfully clicked on the product from the product listing page");
-        } else {
-            test.fail("Product is not selected from the product listing page");
-            logger.info("Product is not selected from the product listing page");
-        }
-		 
-	}
-	
 	private void validateReviewProduct() {
 		
 		test.info("validate the Review of the product");

@@ -72,9 +72,13 @@ public class tc__BySearchingProduct_RegUser_InCheckoutPaypal extends baseClass {
 		            logger.info("Product is not added to cart");
 		        }
 		  
-    		//paypal process from checkout page
-			 tc__CheckOutProcessByPayPal cpp = new tc__CheckOutProcessByPayPal();
-			 cpp.checkoutprocessFromCheckout();
+		        // common checkoutProcess	         
+				 tc__CheckOutProcess cp = new tc__CheckOutProcess();         
+				 cp.checkoutprocess();
+				 
+	    		//paypal process from checkout page
+				 tc__CheckOutProcessByPayPal cpp = new tc__CheckOutProcessByPayPal();
+				 cpp.checkoutprocessFromCheckout();
 		 }else {
 		   	 Assert.fail("User not logged in");
 		   }

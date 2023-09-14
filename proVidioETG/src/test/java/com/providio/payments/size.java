@@ -45,8 +45,7 @@ public class size extends baseClass{
 		     }*/
 		      
 	     }else {
-	    	 System.out.println("Product is out of stock so searching for new product");
-	    	 
+	    	 System.out.println("Product is out of stock so searching for new product");	    	 
 	    	 	Thread.sleep(2000);
              	WebElement minicartcount = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
                 String countOfMinicart = minicartcount.getText();
@@ -74,8 +73,7 @@ public class size extends baseClass{
 		        	 System.out.println("Product is not added to cart");
 		        	 
 		         }	    	 
-	     }
-	     
+	     }	     
 	}
 	
 	public void allElements(WebDriver driver) throws InterruptedException {
@@ -186,8 +184,7 @@ public class size extends baseClass{
 		    	navPage.selectRandomMenu(driver);
 		    	 
 		    	 productListingPage plp = new productListingPage(driver);
-		    	 plp.selectProductRandom(driver);
-		    	 
+		    	 plp.selectProductRandom(driver);		    	 
 		    	 selectSize(driver);    	 
 	     }
 	}

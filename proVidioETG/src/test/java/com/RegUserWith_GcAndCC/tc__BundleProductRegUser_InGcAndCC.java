@@ -62,8 +62,8 @@ public class tc__BundleProductRegUser_InGcAndCC extends baseClass{
              cp.checkoutprocess();
              
            //semi gc and cc 
-				Gc__CC_Paypal gCandCC = new Gc__CC_Paypal();
-				gCandCC.paymentProccessByGCandCC(driver);
+             Gc__CC_Paypal gCandCC = new Gc__CC_Paypal();
+			 gCandCC.paymentProccessByGCandCC(driver);
 	 } else {
 	        Assert.fail("User not logged in");
 	    }

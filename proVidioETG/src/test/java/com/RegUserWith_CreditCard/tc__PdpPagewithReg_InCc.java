@@ -120,8 +120,8 @@ public class tc__PdpPagewithReg_InCc extends baseClass {
 		    logger.info("Clicked on Yes");
 		    pdp.clicknickName(nickName);
 		    logger.info("Entered Nickname");
-		    pdp.clickOnLoc(location);
-		    logger.info("Entered Location");
+		    //pdp.clickOnLoc(location);
+		    //logger.info("Entered Location");
 		    pdp.clickOnSubmitReview(driver);
 		    logger.info("Clicked on Submit Review");
 		    // Add any additional steps for writing a review
@@ -146,25 +146,7 @@ public class tc__PdpPagewithReg_InCc extends baseClass {
 	    // Add any additional steps for adding the product to the cart
 	}
 	
-	/*//validation for the new arrivals of womens
-	private void validatiionNewArrivalWomens() {
-		//validate new arrival womens
-		test.info("verify that menu is selected");
-        WebElement NewwoMens = driver.findElement(By.xpath("//h1[@class ='header page-title text-uppercase m-0 p-0']"));
-        String ActualTitleofwoMens = NewwoMens.getText();
-        String ExpectedTitleofwoMens = "WOMENS";
-        logger.info(NewwoMens.getText());
-        if (ActualTitleofwoMens.equals(ExpectedTitleofwoMens)) {
-            test.pass("Successfully clicked on the NewArrival of  " + ActualTitleofwoMens + " " + " ");
-            logger.info("click Success New arrival womens");
-        } else {
-            test.fail("The page Title does not match expected " + ExpectedTitleofwoMens + " " + "  but found" + " " + ActualTitleofwoMens + " ");
-            logger.info("Click failed");
-        }
-        
-	}*/
-	
-	private void validateproductselect() {
+	public void validateproductselect() {
 		
 		//validate the product is selected
 		test.info("verify that product is selected");

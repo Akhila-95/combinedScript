@@ -61,7 +61,7 @@ public class tc__PaymentProccessByGC extends baseClass{
 	public void performRandomOperations(WebDriver driver) throws InterruptedException {
 		//driver.get(baseURL);
 		//logger.info("enterd into url");
-		String filePath = "C:\\Users\\UpendraReddy\\git\\MainRepo\\proVidioETG\\testDate\\GiftCertificateCodesForGc.xlsx";
+		String filePath = "C:\\Users\\user\\git\\combinedScript\\proVidioETG\\testDate\\GiftCertificateCodesForGc.xlsx";
 		String sheetName = "GC_Codes";
 
 		try {
@@ -78,97 +78,98 @@ public class tc__PaymentProccessByGC extends baseClass{
 			 
 				logger.info(dataList);
 				int operations = 0;
-				   Set<String> pickedValues = new HashSet<>();
+				Set<String> pickedValues = new HashSet<>();
 
-				   while (true) {
-						 String randomValue = pickRandomValueWithoutDuplicate(dataList, pickedValues);
-			                logger.info(randomValue);
-						if (randomValue == null) {
-							logger.info("No data found");
-							break; // No more values to pick
-						}
-						if (randomValue != null) {
-							
-						JavascriptExecutor js = (JavascriptExecutor) driver;				
-						WebElement giftcertificate = driver.findElement(By.xpath("//input[@id='giftCert']"));
-						js.executeScript("arguments[0].click();", giftcertificate);	
-						giftcertificate.sendKeys(randomValue);
-						Thread.sleep(2000);
-							
-							  
-		            //check balance validation and checking the bal of GC
-		             WebElement checkBalButton= driver.findElement(By.xpath("//button[@class='btn btn-primary check-balance']"));
-		             test.info("Verifying check balance button");
-		            
-		                // Scroll down by 500 pixels
-		             js.executeScript("window.scrollBy(0, 500);");                 
-		                js.executeScript("arguments[0].click();",checkBalButton);
-		                //checkBalButton.click();
-		                Thread.sleep(2000);
-		                WebElement checkBal= driver.findElement(By.xpath("//div[@class='balance success']"));
-		                logger.info(checkBal.getText()); 
-			                if(checkBalButton.isDisplayed()) {
-			                	
-		                	test.pass("Check button is enabled and selected");
-			                	logger.info("Check button is enabled and selected");
-			                }else {
-			                	test.fail("Check button is not enabled and not selected");
-			                	logger.info("Check button is  not enabled and selected");
-			                }
-		                
-		            // Click the apply button by passing GC
-		            try {
-		            	Thread.sleep(2000);
-		            	js.executeScript("arguments[0].click();", giftcertificate);	
-						giftcertificate.sendKeys(randomValue);
-			            Thread.sleep(2000);
+			   while (true) {
+					 String randomValue = pickRandomValueWithoutDuplicate(dataList, pickedValues);
+		             logger.info(randomValue);
+					if (randomValue == null) {
+						logger.info("No data found");
+						break; // No more values to pick
+					}
+					if (randomValue != null) {
+						WebElement giftcertificate = driver.findElement(By.xpath("//input[@id='giftCert']"));	
+						if(giftcertificate.isDisplayed()) {
+							JavascriptExecutor js = (JavascriptExecutor) driver;										
+							js.executeScript("arguments[0].click();", giftcertificate);	
+							giftcertificate.sendKeys(randomValue);
+							Thread.sleep(2000);
+								
+								  
+			            //check balance validation and checking the bal of GC
+			             WebElement checkBalButton= driver.findElement(By.xpath("//button[@class='btn btn-primary check-balance']"));
+			             test.info("Verifying check balance button");
 			            
-		                WebElement applyGiftCard = driver.findElement(By.xpath("//button[@value='submit-gifrcert']"));
-		                Thread.sleep(3000);	              
-		                // Scroll down by 500 pixels
-		                js.executeScript("window.scrollBy(0, 500);");  
-		             
-		                // apply button validation
-		                test.info("Verifying apply button is selected");
-		                if(applyGiftCard.isDisplayed()) {
-		                	    js.executeScript("arguments[0].click();", applyGiftCard);
-		                	    test.pass("Apply button is selected");
-		                	    logger.info("Apply button is selected");
-		              
-				                Thread.sleep(2000);
-									if(driver.findElements(By.xpath("//div[contains(text(),'Insufficient Gift Certificate balance')]")).size()!=0) {
-										logger.info("Insufficent funds in this " +randomValue + " gift card" );
-										giftcertificate.clear();
-									}else if(driver.findElements(By.xpath("//div[contains(text(),'Gift card belongs to a different customer')]")).size()!=0){
-										logger.info("This " + randomValue + "Gift Card belongs to different customer ");
-										giftcertificate.clear();
+			                // Scroll down by 500 pixels
+			             js.executeScript("window.scrollBy(0, 500);");                 
+			                js.executeScript("arguments[0].click();",checkBalButton);
+			                //checkBalButton.click();
+			                Thread.sleep(2000);
+			                WebElement checkBal= driver.findElement(By.xpath("//div[@class='balance success']"));
+			                logger.info(checkBal.getText()); 
+				                if(checkBalButton.isDisplayed()) {
+				                	
+			                	test.pass("Check button is enabled and selected");
+				                	logger.info("Check button is enabled and selected");
+				                }else {
+				                	test.fail("Check button is not enabled and not selected");
+				                	logger.info("Check button is  not enabled and selected");
+				                }
+			                
+			            // Click the apply button by passing GC
+			            try {
+			            	Thread.sleep(2000);
+			            	js.executeScript("arguments[0].click();", giftcertificate);	
+							giftcertificate.sendKeys(randomValue);
+				            Thread.sleep(2000);
+				            
+			                WebElement applyGiftCard = driver.findElement(By.xpath("//button[@value='submit-gifrcert']"));
+			                Thread.sleep(3000);	              
+			                // Scroll down by 500 pixels
+			                js.executeScript("window.scrollBy(0, 500);");  
+			             
+			                // apply button validation
+			                test.info("Verifying apply button is selected");
+			                if(applyGiftCard.isDisplayed()) {
+			                	    js.executeScript("arguments[0].click();", applyGiftCard);
+			                	    test.pass("Apply button is selected");
+			                	    logger.info("Apply button is selected");
+			              
+					                Thread.sleep(2000);
+										if(driver.findElements(By.xpath("//div[contains(text(),'Insufficient Gift Certificate balance')]")).size()!=0) {
+											logger.info("Insufficent funds in this " +randomValue + " gift card" );
+											giftcertificate.clear();
+										}else if(driver.findElements(By.xpath("//div[contains(text(),'Gift card belongs to a different customer')]")).size()!=0){
+											logger.info("This " + randomValue + "Gift Card belongs to different customer ");
+											giftcertificate.clear();
+										}
+										
+								        if (driver.findElements(By.xpath("//div[contains(text(),'Your order has no balance, so no payment method is necessary to complete this order')]")).size()!=0) {
+									    	 logger.info("Your order has no balance,so no payment method is necessary");
+									    	 giftcertificate.clear();
+									    	 break;
+								        } else {
+									        	
+								        	dataList.remove(randomValue);
+											logger.info(" After applying GC we have this in datalist"+ dataList);
+									    	    Thread.sleep(5000);
+												operations++;	
+										     }
+									 
+								
 									}
-									
-							        if (driver.findElements(By.xpath("//div[contains(text(),'Your order has no balance, so no payment method is necessary to complete this order')]")).size()!=0) {
-								    	 logger.info("Your order has no balance,so no payment method is necessary");
-								    	 giftcertificate.clear();
-								    	 break;
-							        } else {
-								        	
-							        	dataList.remove(randomValue);
-										logger.info(" After applying GC we have this in datalist"+ dataList);
-								    	    Thread.sleep(5000);
-											operations++;	
-									     }
-								 
-							
-								}
-		                 } catch (NoSuchElementException e) {
-					  				logger.info("Element not found: " + e.getMessage());
-								}  
-						}			
-			  }
-					logger.info("Total data: " + totalProducts);
-					logger.info("Total operations performed: " + operations);
-		  }catch (IOException e) {
-		
-				e.printStackTrace();
-	   }	
+			                 } catch (NoSuchElementException e) {
+						  				logger.info("Element not found: " + e.getMessage());
+									}  
+							}		
+					}
+				  }
+						logger.info("Total data: " + totalProducts);
+						logger.info("Total operations performed: " + operations);
+			  }catch (IOException e) {
+			
+					e.printStackTrace();
+		   }	
 		   if (driver.findElements(By.xpath("//div[contains(text(),'Your order has no balance, so no payment method is necessary to complete this order')]")).size() != 0) {
 				 //revieworder button  
 			    paymentpPage pp = new paymentpPage(driver);
@@ -189,7 +190,7 @@ public class tc__PaymentProccessByGC extends baseClass{
 				 checkout.validatePlacetheOrderPage();
 			
 		     //ordernumberandOrderdate
-				 checkout.ordernumberandOrderdat();
+				 checkout.ordernumberandOrderdate();
 		   }
 	}
 	private String pickRandomValueWithoutDuplicate(List<String> dataList, Set<String> pickedValues) {
@@ -338,15 +339,20 @@ public class tc__PaymentProccessByGC extends baseClass{
 		
 			rop.clickonplaceorderwithJsExuter(driver);
 			logger.info("successfully click on the place order button");
-			Thread.sleep(5000);
-			logger.info(driver.getTitle());
-		
-			 Checkout_Validation checkout= new Checkout_Validation();
-		 //validate the final place the order page
-			 checkout.validatePlacetheOrderPage();
-		
-	     //ordernumberandOrderdate
-			 checkout.ordernumberandOrderdat();
+			Thread.sleep(8000);
+			
+	    		System.out.println(driver.getTitle());
+			
+	    		 //Checkout_Validation checkout= new Checkout_Validation();
+	    		if(driver.getTitle().endsWith("Order Confirmation | Providio")) {
+	    			
+	    			 Checkout_Validation checkout= new Checkout_Validation();
+	    		 //validate the final place the order page
+	    			 checkout.validatePlacetheOrderPage();
+	    		
+	    	     //ordernumberandOrderdate
+	    			 checkout.ordernumberandOrderdate();
+	    			 Thread.sleep(5000);
 	   }else {
 		   test.pass("No sufficient balance in Gift certificate");
 	   }
@@ -501,4 +507,5 @@ public class tc__PaymentProccessByGC extends baseClass{
 		    }
 		}*/
 
+	}
 }

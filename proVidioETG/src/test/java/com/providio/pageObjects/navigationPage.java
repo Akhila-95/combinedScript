@@ -372,11 +372,12 @@ WebElement mensPants;
 
 public void ClickMensofPants(WebDriver driver) throws InterruptedException{
     Thread.sleep(1000);
-    mensPants.click();
-    if(mensPants.isDisplayed()) {
-    	JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", mensPants);
-    }
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    js.executeScript("arguments[0].click();", mensPants);
+	    if(mensPants.isDisplayed()) {
+	    	
+	        mensPants.click();
+	    }
 }
 
 //ties

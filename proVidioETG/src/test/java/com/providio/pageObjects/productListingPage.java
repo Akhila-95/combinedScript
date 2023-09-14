@@ -338,7 +338,7 @@ WebDriver lDriver;
             
             
 	        }
-	        //RandomSelectProductFormPLP.click();
+	      
 	    }
 
 	    public void selectAllProductsFormPLP(WebDriver driver) throws InterruptedException {

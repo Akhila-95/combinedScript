@@ -14,15 +14,20 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.NoSuchWindowException;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.TestNG;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.xml.XmlSuite;
 
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -95,7 +100,7 @@ public class baseClass {
 	protected static boolean isLoggedIn=false;
 	
 	private static ExtentReports report = new ExtentReports();
-    private ExtentSparkReporter reporter = new ExtentSparkReporter("C:\\Users\\UpendraReddy\\git\\MainRepo\\proVidioETG\\Reports\\ProvidioTestReport.html");
+    private ExtentSparkReporter reporter = new ExtentSparkReporter("C:\\Users\\user\\git\\combinedScript\\proVidioETG\\Reports\\ProvidioTestReport.html");
 	
 	//Reporting
 	//static ExtentReports report;
@@ -106,7 +111,8 @@ public class baseClass {
         report = new ExtentReports();
         report.attachReporter(reporter);
         
-        initializeDriver() ;
+       
+		initializeDriver() ;
 
 	}
 	@BeforeClass
@@ -189,14 +195,14 @@ public class baseClass {
 		   report.flush();
 		   
 
-		   driver.get("C:\\Users\\UpendraReddy\\git\\MainRepo\\proVidioETG\\Reports\\ProvidioTestReport.html");
+		   driver.get("C:\\Users\\user\\git\\combinedScript\\proVidioETG\\Reports\\ProvidioTestReport.html");
 			driver.manage().window().maximize();
 			Thread.sleep(5000);
 			// Take a screenshot of the entire browser window
 			File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
 			// Define the destination path for the screenshot
-			String screenshotPath = "C:\\Users\\UpendraReddy\\git\\MainRepo\\proVidioETG\\Reports\\ReportsScreenshot.png";
+			String screenshotPath = "C:\\Users\\user\\git\\combinedScript\\proVidioETG\\Reports\\ReportsScreenshot.png";
 			// Save the screenshot to the specified path
 			FileUtils.copyFile(screenshot, new File(screenshotPath));
 
@@ -210,10 +216,13 @@ public class baseClass {
 	    *  webdriver manager is a library which will manage and set up the specific browser and download  the executable driver 
 	    *  driver:- by creating this instance we creating connection with specific browser
 	    */
-	   private void initializeDriver() {
-		   
-	        WebDriverManager.chromedriver().setup();
-	        driver = new ChromeDriver();
+	   //@Parameters("browser")
+	   //@BeforeTest
+	   public void initializeDriver() {
+	
+		   ChromeOptions co = new ChromeOptions();
+		   co.addArguments("--remote-allow-origins=*");
+	        driver = new ChromeDriver(co);
 	        driver.manage().window().maximize();
 
 	        // Clear all cookies

@@ -23,26 +23,28 @@ public class tc__BySearchingProduct_GuestUser_InCC extends baseClass {
 
 	@Test//(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
     public void bySearchingProduct() throws InterruptedException {
-		    //step2 1: site url
+		
+		  //step2 1: site url
 			driver.get(baseURL);
+			test.info("Entered into url");
 			
-        	//searching a product 
+          //searching a product 
             homePage homepage = new homePage(driver);
             homepage.clickOnSearchBar(this.searchBar);
-           test.info("searched a product " + this.searchBar);
+            test.info("searched a product " + this.searchBar);
             
-            //clicked on searched product
+         //clicked on searched product
             homepage.clickOnSearchedProduct();
             test.info("clicked on searched product");
             
-            //count of cart before adding the product in cart 
+         //count of cart before adding the product in cart 
             Thread.sleep(2000);
 			List<WebElement> minicartcountList = driver.findElements(By.cssSelector(".minicart-quantity"));
 			if(minicartcountList.size()>0) {
 				 WebElement minicartcount = driver.findElement(By.cssSelector(".minicart-quantity"));
 			    	String countOfMinicart = minicartcount.getText();
 			   
-			// Check if the string is not empty and contains only digits
+		//Check if the string is not empty and contains only digits
 			 if (!countOfMinicart.isEmpty() && countOfMinicart.matches("\\d+")) {
 			        minicartCountValue = Integer.parseInt(countOfMinicart);
 			        System.out.println("The minicart count before adding the product is " + minicartCountValue);    		
@@ -54,14 +56,14 @@ public class tc__BySearchingProduct_GuestUser_InCC extends baseClass {
 		          size s = new size();
 		          s.selectSize(driver);
 	    		 }
-           // cart count after adding the product		 
+         // cart count after adding the product		 
             WebElement minicartcountafteradding =driver.findElement(By.cssSelector(".minicart-quantity"));
             String countOfMinicartafteradding = minicartcountafteradding.getText();
             int minicartCountValueafteradding = Integer.parseInt(countOfMinicartafteradding);
 
             logger.info("The minicart count after adding the product is"+minicartCountValueafteradding);
 
-	      //validation for product add to cart
+	     //validation for product add to cart
 	        test.info("Verifying the product is added to cart or not ");
 		        if( minicartCountValueafteradding!= minicartCountValue) {
 		            test.pass("Product added to cart");
@@ -71,11 +73,11 @@ public class tc__BySearchingProduct_GuestUser_InCC extends baseClass {
 		            logger.info("Product is not added to cart");
 		        }
 		        
-	       //checkoutProcess	        
+	      //checkoutProcess	        
             tc__CheckOutProcess cp = new tc__CheckOutProcess();            
             cp.checkoutprocess();
             
-            //payment by credit card
+          //payment by credit card
 		     tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();	     
 		     cc.paymentByCreditCard();
     }

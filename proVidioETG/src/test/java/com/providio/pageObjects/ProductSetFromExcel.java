@@ -75,7 +75,7 @@ public class ProductSetFromExcel extends baseClass {
 	
 	public void performRandomOperations(WebDriver driver) throws InterruptedException {
 		
-		String filePath = "C:\\Users\\UpendraReddy\\git\\MainRepo\\proVidioETG\\testDate\\ProductSetSkewId.xlsx";
+		String filePath = "C:\\Users\\user\\git\\combinedScript\\proVidioETG\\testDate\\ProductSetSkewId.xlsx";
 		String sheetName = "SkewId";
 
 		try {
@@ -126,34 +126,37 @@ public class ProductSetFromExcel extends baseClass {
 					
 					//validation of product
 					Thread.sleep(2000);
-					WebElement searchedForProduct= driver.findElement(By.xpath("//div[@class='product-number d-flex align-items-center ']"));
-					String searchedForText= searchedForProduct.getText();
-					System.out.println("The product ID in PDP is "+ searchedForText);
-					if(randomValue.equals(searchedForText)) {
-						test.pass(" searched for for the right product and product id is " +randomValue );
-						logger.info("Searched for right product");
-					}
-					else {
-						test.fail("Searched product and the product after search are not matching");
-						logger.info("Searched product and the product after search are not matching");
-					}
+					List<WebElement> searchedForProduct= driver.findElements(By.xpath("//div[@class='product-number d-flex align-items-center ']"));
+					if(searchedForProduct.size()>0) {
+						WebElement searchedForProductDisplay= driver.findElement(By.xpath("//div[@class='product-number d-flex align-items-center ']"));
+						String searchedForText= searchedForProductDisplay.getText();
+						System.out.println("The product ID in PDP is "+ searchedForText);
+						if(randomValue.equals(searchedForText)) {
+							test.pass(" searched for for the right product and product id is " +randomValue );
+							logger.info("Searched for right product");
+						}
+						else {
+							test.fail("Searched product and the product after search are not matching");
+							logger.info("Searched product and the product after search are not matching");
+						}
+							
 						
-					
-					SizeSelectioForVariation ss= new SizeSelectioForVariation();
-					ss.sizeSelection(driver);
-					logger.info("Product added to cart");
-					
-					dataList.remove(randomValue);
-					System.out.println(" After searching the product we have this in datalist"+ dataList);
-					
-					Thread.sleep(5000);
-					operations++;
+						SizeSelectioForVariation ss= new SizeSelectioForVariation();
+						ss.sizeSelection(driver);
+						logger.info("Product added to cart");
+						
+						dataList.remove(randomValue);
+						System.out.println(" After searching the product we have this in datalist"+ dataList);
+						
+						Thread.sleep(5000);
+						operations++;
+					}
+					}
+	
+					System.out.println("Total data: " + totalProducts);
+					System.out.println("Total operations performed: " + operations);
 				}
-				}
-
-				System.out.println("Total data: " + totalProducts);
-				System.out.println("Total operations performed: " + operations);
-			}
+		}
 		
 	catch (IOException e) {
 	

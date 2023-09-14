@@ -563,7 +563,7 @@ WebDriver lDriver;
                 	 emailLogin1.sendKeys("rahulnaik@etisbew.com");
                 	 test.info("Entered username");
                  }
-                 Thread.sleep(3000);
+                 Thread.sleep(2000);
                  if(nextButton.size()>0) {
                 	 WebElement nextButton1=driver.findElement(By.cssSelector("#btnNext"));
 	                 nextButton1.click();
