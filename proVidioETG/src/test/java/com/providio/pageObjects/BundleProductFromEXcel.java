@@ -144,8 +144,8 @@ import com.providio.testcases.baseClass;
 							 System.out.println(" After searching the product we have this in datalist"+ dataList);
 								
 							Thread.sleep(5000);
-							//operations++;
-							break;	
+							operations++;
+							//break;	
 							}
 						}
 					}

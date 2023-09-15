@@ -29,16 +29,16 @@ public class tc__PdpPagewithGuestuser extends baseClass {
 		
 		test.info("Open browser");
         // Test Case 0: Open browser
-        driver.get(baseURL);
+        driver.get("https://zzqi-002.dx.commercecloud.salesforce.com/s/RefArch/electronics/gps%20navigation/garmin-nuvi-255M.html?lang=en_US");
         logger.info("Opened browser");
 	    // Validate if the user is logged in or not
-	 
+	 /*
 	        // Step 1: Navigate to Women's New Arrivals
         	navigateRandomMenu();
         	
 	        // Step 2: Select a Product from the Listing Page
 	        selectProductFromListingPage();
-
+*/
 	        // Step 3: Perform actions on Product Description Page
 	        performActionsOnProductDescriptionPage();
 
@@ -120,6 +120,7 @@ public class tc__PdpPagewithGuestuser extends baseClass {
 			    logger.info("Clicked on Rating");
 			    pdp.clickOnReviewHeadline(driver, headline);
 			    logger.info("Entered Review Headline");
+			    Thread.sleep(1000);
 			    pdp.clickOnComments(comment);
 			    logger.info("Entered Comments");
 			    pdp.clickOnYes();

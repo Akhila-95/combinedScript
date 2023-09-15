@@ -41,7 +41,7 @@ public class tc__HomePageValidation extends baseClass {
 		home.clickOnSearchBar(this.searchBar);
 		logger.info("Searched for a product");
 		
-		String actualSearch= "Microsoft Zune 16GB Digital Media Player";
+		String actualSearch= "3/4 Sleeve Crew Neck Cardigan";
 		Thread.sleep(5000);
 		WebElement searchedProduct = driver.findElement(By.xpath("(//span[@class='name'])[2]"));
 		String expectedSearch= searchedProduct.getText();

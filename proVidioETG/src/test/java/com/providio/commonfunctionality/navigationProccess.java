@@ -62,6 +62,7 @@ public class navigationProccess extends baseClass {
 		    		 }
 
 	   		 if(minicartcountList.size()>0) {
+	   			 Thread.sleep(1000);
 		          WebElement minicartcountafteradding = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
 		          String countOfMinicartafteradding = minicartcountafteradding.getText();
 		          int minicartCountValueafteradding = Integer.parseInt(countOfMinicartafteradding);	

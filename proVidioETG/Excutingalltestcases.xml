@@ -13,14 +13,20 @@
 		<package name="com.GuestUserWith_CreditCard" />                  		
 		<package name="com.GuestUserWith_Minicart_Paypal" /> 
 		<package name="com.GuestUserWith_GiftCard" />
-		<package name="com.GuestUserWith_GcAndCC" />  	
-		<!-- 
-	 	<package name="com.GuestUserWith_ViewCart_Paypal" /> 
-					
-		<package name="com.GuestUserWith_GcAndPaypal" /> 
-		 -->   
+		<package name="com.GuestUserWith_GcAndCC" />  		
+		<!-- 	
+	 	<package name="com.GuestUserWith_ViewCart_Paypal" /> 				
+		<package name="com.GuestUserWith_GcAndPaypal" />		 -->
+		   
+		   
 	</packages>
+  <!-- 
+   <packages>
+  		 <package name=" com.providio.Validations"></package> 
    
+   </packages>
+   
+    -->
    </test> 
   
 </suite> <!-- 

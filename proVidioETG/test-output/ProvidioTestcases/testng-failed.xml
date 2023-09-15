@@ -3,83 +3,42 @@
 <suite name="Failed suite [ProvidioTestcases]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Automation(failed)">
     <classes>
-      <class name="com.GuestUserWith_CreditCard.tc__ShippingAndBillingAddressDiffer_Guest_InCc">
+      <class name="com.GuestUserWith_GiftCard.tc__SimpleProductForGuestUser_InGiftCard">
         <methods>
           <include name="setUpforReport"/>
-          <include name="shippingAndBillingAddressDiffer_Guest"/>
-          <include name="afterMethod"/>
+          <include name="simpleProduct"/>
           <include name="setUp"/>
+          <include name="afterMethod"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.GuestUserWith_CreditCard.tc__ShippingAndBillingAddressDiffer_Guest_InCc -->
-      <class name="com.GuestUserWith_Checkout_Paypal.tc__VariationProductForGuestUser_InCheckoutPaypal">
-        <methods>
-          <include name="setUpforReport"/>
-          <include name="variationProduct"/>
-          <include name="afterMethod"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.GuestUserWith_Checkout_Paypal.tc__VariationProductForGuestUser_InCheckoutPaypal -->
+      </class> <!-- com.GuestUserWith_GiftCard.tc__SimpleProductForGuestUser_InGiftCard -->
       <class name="com.GuestUserWith_CreditCard.tc__SimpleProductsAndBundle_Gc_InCC">
         <methods>
           <include name="setUpforReport"/>
           <include name="afterMethod"/>
           <include name="setUp"/>
-          <include name="simpleProducts_Bundle_Gc"/>
           <include name="tearDown"/>
+          <include name="simpleProducts_Bundle_Gc"/>
         </methods>
       </class> <!-- com.GuestUserWith_CreditCard.tc__SimpleProductsAndBundle_Gc_InCC -->
-      <class name="com.GuestUserWith_CreditCard.tc__GuestUser_InCc">
-        <methods>
-          <include name="setUpforReport"/>
-          <include name="guestlogin"/>
-          <include name="afterMethod"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.GuestUserWith_CreditCard.tc__GuestUser_InCc -->
-      <class name="com.GuestUserWith_CreditCard.tc__VariationProductForGuestUser_InCC">
+      <class name="com.GuestUserWith_CreditCard.tc__BySearchingProduct_GuestUser_InCC">
         <methods>
           <include name="setUpforReport"/>
           <include name="afterMethod"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="variationProduct"/>
-        </methods>
-      </class> <!-- com.GuestUserWith_CreditCard.tc__VariationProductForGuestUser_InCC -->
-      <class name="com.GuestUserWith_Checkout_Paypal.tc__SimpleProductsAndBundle_Gc_InCheckout_Paypal">
-        <methods>
-          <include name="setUpforReport"/>
-          <include name="simpleProducts_Bundle_Gc"/>
-          <include name="setUp"/>
-          <include name="afterMethod"/>
+          <include name="bySearchingProduct"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.GuestUserWith_Checkout_Paypal.tc__SimpleProductsAndBundle_Gc_InCheckout_Paypal -->
+      </class> <!-- com.GuestUserWith_CreditCard.tc__BySearchingProduct_GuestUser_InCC -->
       <class name="com.GuestUserWith_CreditCard.tc__BundleProductForGuestUser_CC">
         <methods>
+          <include name="setUpforReport"/>
+          <include name="bundleProduct"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.GuestUserWith_CreditCard.tc__BundleProductForGuestUser_CC -->
-      <class name="com.GuestUserWith_CreditCard.tc__SimpleProductForGuestUser_InCC">
-        <methods>
-          <include name="setUpforReport"/>
-          <include name="simpleProduct"/>
-          <include name="afterMethod"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.GuestUserWith_CreditCard.tc__SimpleProductForGuestUser_InCC -->
-      <class name="com.GuestUserWith_CreditCard.tc__ProductSetForGuestUser_InCC">
-        <methods>
-          <include name="setUpforReport"/>
-          <include name="afterMethod"/>
-          <include name="setUp"/>
-          <include name="productSet"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.GuestUserWith_CreditCard.tc__ProductSetForGuestUser_InCC -->
       <class name="com.GuestUserWith_CreditCard.tc__simpleProductAndGc_InCC">
         <methods>
           <include name="setUpforReport"/>
@@ -89,15 +48,69 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.GuestUserWith_CreditCard.tc__simpleProductAndGc_InCC -->
+      <class name="com.GuestUserWith_CreditCard.tc__ShippingAndBillingAddressDiffer_Guest_InCc">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="shippingAndBillingAddressDiffer_Guest"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_CreditCard.tc__ShippingAndBillingAddressDiffer_Guest_InCc -->
+      <class name="com.GuestUserWith_GcAndCC.tc__SimpleProducts_Bundle_Gc_InCcAndGc">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="simpleProducts_Bundle_Gc"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_GcAndCC.tc__SimpleProducts_Bundle_Gc_InCcAndGc -->
+      <class name="com.GuestUserWith_GiftCard.tc__PickUpStore_Guest_InGiftCard">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="paypalFromCheckoutPage"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_GiftCard.tc__PickUpStore_Guest_InGiftCard -->
+      <class name="com.GuestUserWith_GcAndCC.tc__simpleProductAndGc_InCcAndGc">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="simpleProduct_Gc"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_GcAndCC.tc__simpleProductAndGc_InCcAndGc -->
+      <class name="com.GuestUserWith_GiftCard.tc__ProductSetForGuestUser_InGiftCard">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="productSet"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_GiftCard.tc__ProductSetForGuestUser_InGiftCard -->
       <class name="com.GuestUserWith_CreditCard.tc__PickUpStore_Guest_CC">
         <methods>
           <include name="setUpforReport"/>
           <include name="afterMethod"/>
-          <include name="paypalFromCheckoutPage"/>
           <include name="setUp"/>
+          <include name="paypalFromCheckoutPage"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.GuestUserWith_CreditCard.tc__PickUpStore_Guest_CC -->
+      <class name="com.GuestUserWith_GcAndCC.tc__Bundle_GcAndAllPromotions_Guest_InGcAndCC">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="bundle_GcAndAllPromotions"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_GcAndCC.tc__Bundle_GcAndAllPromotions_Guest_InGcAndCC -->
       <class name="com.GuestUserWith_CreditCard.tc__PdpPagewithGuestuser">
         <methods>
           <include name="setUpforReport"/>
@@ -107,6 +120,150 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.GuestUserWith_CreditCard.tc__PdpPagewithGuestuser -->
+      <class name="com.GuestUserWith_CreditCard.tc__Bundle_GcAndAllPromotions_Guest_InCC">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="bundle_GcAndAllPromotions"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_CreditCard.tc__Bundle_GcAndAllPromotions_Guest_InCC -->
+      <class name="com.GuestUserWith_CreditCard.tc__VariationProductForGuestUser_InCC">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="variationProduct"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_CreditCard.tc__VariationProductForGuestUser_InCC -->
+      <class name="com.GuestUserWith_GiftCard.tc__Bundle_GcAndAllPromotions_Guest_InGiftCard">
+        <methods>
+          <include name="bundle_GcAndAllPromotions"/>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_GiftCard.tc__Bundle_GcAndAllPromotions_Guest_InGiftCard -->
+      <class name="com.GuestUserWith_GcAndCC.tc__OrderByGC_CC_GuestUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="paypalFromCheckoutPage"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_GcAndCC.tc__OrderByGC_CC_GuestUser -->
+      <class name="com.GuestUserWith_CreditCard.tc__SimpleProductForGuestUser_InCC">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="simpleProduct"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_CreditCard.tc__SimpleProductForGuestUser_InCC -->
+      <class name="com.GuestUserWith_GiftCard.tc__OrderByGc_GuestUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="paymentByGiftCardInGuestUser"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_GiftCard.tc__OrderByGc_GuestUser -->
+      <class name="com.GuestUserWith_GiftCard.tc__BundleProductForGuestUser_InGiftCard">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="bundleProduct"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_GiftCard.tc__BundleProductForGuestUser_InGiftCard -->
+      <class name="com.GuestUserWith_CreditCard.tc__GuestUser_InCc">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="guestlogin"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_CreditCard.tc__GuestUser_InCc -->
+      <class name="com.GuestUserWith_GiftCard.tc__VariationProductForGuestUser_InGiftCard">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="variationProduct"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_GiftCard.tc__VariationProductForGuestUser_InGiftCard -->
+      <class name="com.GuestUserWith_GcAndCC.tc__VariationProductForGuestUser_InGcAndCc">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="variationProduct"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_GcAndCC.tc__VariationProductForGuestUser_InGcAndCc -->
+      <class name="com.GuestUserWith_GcAndCC.tc__BundleProductForGuestUser_InGcAndCc">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="bundleProduct"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_GcAndCC.tc__BundleProductForGuestUser_InGcAndCc -->
+      <class name="com.GuestUserWith_GcAndCC.tc__SimpleProductForGuestUser_InGcAndCC">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="simpleProduct"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_GcAndCC.tc__SimpleProductForGuestUser_InGcAndCC -->
+      <class name="com.GuestUserWith_Minicart_Paypal.tc__PaypalFromLoginPageGuestUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="PaypalFromLoginPage"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_Minicart_Paypal.tc__PaypalFromLoginPageGuestUser -->
+      <class name="com.GuestUserWith_GiftCard.tc__simpleProductAndGc_InGiftCard">
+        <methods>
+          <include name="simpleProduct_Gc"/>
+          <include name="setUpforReport"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_GiftCard.tc__simpleProductAndGc_InGiftCard -->
+      <class name="com.GuestUserWith_GcAndCC.tc__PickUpStore_Guest_InGcAndCC">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="paypalFromCheckoutPage"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_GcAndCC.tc__PickUpStore_Guest_InGcAndCC -->
+      <class name="com.GuestUserWith_GiftCard.tc__SimpleProductsAndBundle_Gc_InGiftCard">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="simpleProducts_Bundle_Gc"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.GuestUserWith_GiftCard.tc__SimpleProductsAndBundle_Gc_InGiftCard -->
     </classes>
   </test> <!-- Automation(failed) -->
 </suite> <!-- Failed suite [ProvidioTestcases] -->

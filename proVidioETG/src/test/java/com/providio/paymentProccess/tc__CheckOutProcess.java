@@ -130,7 +130,7 @@ public class tc__CheckOutProcess extends baseClass {
         //List<WebElement> existingAddress = driver.findElements(By.xpath("//select[@name='shipmentSelector' and @id='shipmentSelector-default']"));        
         //if(existingAddress.size()>0) {
 	        List<WebElement> existingAddress1 = driver.findElements(By.xpath("//select[@name='shipmentSelector' and @id='shipmentSelector-default']"));
-	      //  if(existingAddress1.size()>0) {
+	        if(existingAddress1.size()>0) {
 	        	 WebElement existingAddress = driver.findElement(By.xpath("//select[@name='shipmentSelector' and @id='shipmentSelector-default']"));
 		         List<WebElement> options1 = existingAddress.findElements(By.xpath("./option"));
 		         System.out.println(options1.size());
@@ -141,6 +141,7 @@ public class tc__CheckOutProcess extends baseClass {
 		        	if(addNewAddress.isDisplayed()) {
 			        	//addNewAddress.click();			        	
 		        	}
+		        }
 			   
 	        }else {
 	        	//shipping address
@@ -191,7 +192,7 @@ public class tc__CheckOutProcess extends baseClass {
         if(errorMessageInvalidCityList.size()>0) {
 	        WebElement errorMessageInvalidCity = driver.findElement(By.xpath("//div[@id='defaultCity']"));
 	        boolean isDisplayedinvalidcity = errorMessageInvalidCity.isDisplayed();
-	        test.info("The error is " + errorMessageInvalidCity );
+	        test.info("The error is " + errorMessageInvalidCity.getText() );
 
 	        if(isDisplayedinvalidcity) {
 	        	test.info("User entered the wrong city and we are entering the new address");
